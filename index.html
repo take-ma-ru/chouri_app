@@ -25,6 +25,11 @@
     </style>
   <meta name="theme-color" content="#2D9B6F">
 <meta name="description" content="手持ち食材からAIがレシピを提案するアプリ">
+<link rel="manifest" href="/chouri_app/manifest.json" />
+<link rel="apple-touch-icon" href="/chouri_app/icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="KitchenNote" />
 <link rel="icon" href="/chouri_app/favicon.ico" /></head>
 
   <body>
@@ -35,5 +40,15 @@
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
   <script src="/chouri_app/_expo/static/js/web/index-86181f549d45a55eb7f7d39a6cb0fc34.js" defer></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/chouri_app/sw.js')
+          .then(function (reg) { console.log('SW 登録成功:', reg.scope); })
+          .catch(function (err) { console.log('SW 登録失敗:', err); });
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+{
+  "name": "Kitchen Note",
+  "short_name": "KitchenNote",
+  "description": "手持ち食材からAIがレシピを提案するアプリ",
+  "start_url": "/chouri_app/",
+  "scope": "/chouri_app/",
+  "display": "standalone",
+  "background_color": "#F8FAF9",
+  "theme_color": "#2D9B6F",
+  "lang": "ja",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
